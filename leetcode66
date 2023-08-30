@@ -1,0 +1,19 @@
+class Solution {
+    public int[] plusOne(int[] digits) {
+
+      for(int i= digits.length-1;i>=0;i--)
+      {
+          if(digits[i]<9)
+          {
+            digits[i]++;
+            return digits;   
+          } 
+          digits[i]=0; //executes only when if condition does not satisfy
+      }
+         int[] nums = new int[digits.length+1]; // new array of size +1 of given array, created only when control comes out of for loop without executing return statement
+         nums[0]=1; // assigning 1 to first element and rest all elements of new array will be zero
+         return nums;
+         
+        
+    }
+}
